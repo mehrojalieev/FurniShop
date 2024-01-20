@@ -1,74 +1,135 @@
 <template>
-    <Nav/>
+    <Nav />
     <header>
-        <img src="../assets/hero_banner.png" >
-        <div class="hero__content">
-            <h2>Creative Home Simpify your Furniture</h2>
-            <p>Do i have consent to record this meeting gain locaion, root-and-branch, review, nor game plan who’s the goto</p>
-            <button>Shop Now</button>
+        <Container>
+            <div class="hero__content">
+                <h2>Creative Home Simpify your Furniture</h2>
+                <p>Do i have consent to record this meeting gain locaion, root-and-branch, review, nor game plan who’s the
+                    goto</p>
+                <button>Shop Now</button>
+            </div>
+        </Container>
+        <div class="features">
+        <div class="feature-card">
+            <strong>7</strong>
+            <p>Year Experience</p>
         </div>
+        <div class="feature-card">
+            <strong>2</strong>
+            <p>Opened in the country</p>
+        </div>
+        <div class="feature-card">
+            <strong>10k+</strong>
+            <p>Furniture sold</p>
+        </div>
+        <div class="feature-card">
+            <strong>260+</strong>
+            <p>Variant Furniture</p>
+        </div>
+    </div>
     </header>
 </template>
 
 
 <script>
+import Container from '@/utils/Container.vue';
 import Nav from './Nav.vue';
-    export default {
-        components: {
-            Nav
-        }
+export default {
+    components: {
+        Nav,
+        Container
     }
+}
 </script>
 
 <style scoped>
-    header{
-       
-        width: 100%;
-        position: absolute;
-        min-height: 850px;
-        top: 0 !important;
+header {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 850px;
+    background: url("../assets/hero_banner.png") no-repeat;
+    background-size: cover;
+    background-color: gold;
+}
 
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .hero__content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        left: calc(15%);
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        color: #fff;
+        font-size: 64px;
+        line-height: 76px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        width: 880px;
         text-align: center;
-        top: calc(23%);
-        h2{
-            color: #fff;
-            font-size: 64px;
-            line-height: 76px;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            width: 880px;
-            text-align: center;
-        }
-        p{
-            margin-top: 30px;
-            color: #fff;
-            font-size: 20px;
-            line-height: 30px;
-            width: 620px;
-            text-align: center;
-            letter-spacing: 0.2px;
-        }
-        button{
-            border-radius: 10px;
-            margin-top: 60px;
-            padding: 10px 90px;
-            color: #fff;
-            font-size: 20px;
-            border: none;
-            letter-spacing: 0.2px;
-            font-weight: 600;
-            background-color: rgba(226, 226, 226, 0.4);
-        }
     }
+
+    p {
+        margin-top: 30px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        width: 620px;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+
+    button {
+        border-radius: 10px;
+        margin-top: 60px;
+        padding: 10px 90px;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        background-color: rgba(226, 226, 226, 0.4);
+    }
+}
+.features {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    bottom: 0;
+    top: 100%;
+    margin: auto;
+    height: 180px;
+    border-radius: 20px;
+    background-color: var(--success-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 120px;
+}
+
+.feature-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    border-right: 2px solid #fff;
+    /* padding-right: 50px; */
+
+    strong {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    p {
+        width: 110px;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
 </style>

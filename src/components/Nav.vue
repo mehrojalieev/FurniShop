@@ -2,26 +2,29 @@
 
 <template>
     <nav>
+        <Container>
             <div class="nav-wrapper">
                 <div class="nav__logo">
                     <img src="../assets/logo.svg" alt=""/>
                 </div>
                 <ul class="nav__menu">
-                    <li><router-view style="font-weight: 600;" class="item-link">Home</router-view></li>
-                    <li><router-view class="item-link">About</router-view></li>
-                    <li><router-view class="item-link">Features</router-view></li>
-                    <li><router-view class="item-link">Contact</router-view></li>
+                    <li><router-link>Home</router-link></li>
+                    <li><router-link  class="item-link" >About</router-link></li>
+                    <li><router-link class="item-link">Features</router-link></li>
+                    <li><router-link class="item-link">Contact</router-link></li>
                 </ul>
             </div>
+        </Container>
     </nav>
 </template>
 
 
 <script>
-
+    import Container from '@/utils/Container.vue';
+import {RouterLink} from 'vue-router'
     export default {
-
-    }
+    components: { Container }
+}
 </script>
 
 
@@ -39,9 +42,6 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        max-width: 1250px;
-        padding: 0px 10px;
-        margin: 0 auto;
     }
     .nav__menu{
         display: flex;
@@ -49,7 +49,6 @@
         column-gap: 64px;
         list-style-type: none;
         color: #fff;
-        padding-right: 70px;
         .item-link{
             font-size: 16px;
             font-weight: 400;
