@@ -1,22 +1,16 @@
 <script setup>
-  import HomePage from "./views/HomePage.vue"
-  // import {RouterView} from 'vue-router'
+  import {RouterView} from 'vue-router'
 </script>
 
 <template>
-  <!-- <router-view/> -->
-  
-  <HomePage/>
+  <router-view/>
 </template>
 
 
 <script >
+// import { RouterView } from "vue-router"; 
 import Data from "./database/products.json"
 console.log(Data);
-  export default {
-    data(){
-
-    }
-  }
+  
 </script>
 
