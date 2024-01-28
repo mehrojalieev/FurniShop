@@ -1,16 +1,17 @@
-<script setup>
-  import {RouterView} from 'vue-router'
-</script>
-
 <template>
   <router-view/>
+  <Footer/>
 </template>
 
 
 <script >
-// import { RouterView } from "vue-router"; 
-import Data from "./database/products.json"
-console.log(Data);
+import { RouterView } from "vue-router"; 
+import Footer from "./components/Footer.vue";
+export default {
+  components: {
+    Footer
+  }
+}
   
 </script>
 

@@ -8,7 +8,7 @@
                 <router-link class="shop-link">Shop All</router-link>
             </div>
             <div class="swiper-container">
-                <swiper loop="true" space-between="20"  class="mySwiper">
+                <swiper loop="true" space-between="20" class="mySwiper">
                     <swiper-slide class="swiper-slide">
                         <img src="../assets/carousel_image1.png">
                         <h3>Chair</h3>
@@ -42,18 +42,16 @@ export default {
         Swiper,
         SwiperSlide,
     },
-    setup() {
-        return {};
-    },
+
 }
 </script>
 
 <style lang="scss" >
 .carousel {
-
     display: flex;
     column-gap: 70px;
     width: 100%;
+    height: 400px;
     margin-top: 170px;
 }
 
@@ -101,17 +99,20 @@ export default {
     height: 400px !important;
     border-radius: 5px;
     overflow: hidden;
-    img{
+
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: 0.3s;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             opacity: 0.9;
         }
     }
-    h3{
+
+    h3 {
         position: absolute;
         bottom: 10px;
         left: 80px;
