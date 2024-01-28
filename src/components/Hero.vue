@@ -4,29 +4,28 @@
         <Container>
             <div class="hero__content">
                 <h2>Creative Home Simpify your Furniture</h2>
-                <p>Do i have consent to record this meeting gain locaion, root-and-branch, review, nor game plan who’s the
-                    goto</p>
+                <p>Do i have consent to record this meeting gain locaion, root-and-branch, review, nor game plan who’s the goto</p>
                 <button>Shop Now</button>
             </div>
         </Container>
         <div class="features">
-        <div class="feature-card">
-            <strong>7</strong>
-            <p>Year Experience</p>
+            <div class="feature-card">
+                <strong>7</strong>
+                <p>Year Experience</p>
+            </div>
+            <div class="feature-card">
+                <strong>2</strong>
+                <p>Opened in the country</p>
+            </div>
+            <div class="feature-card">
+                <strong>10k+</strong>
+                <p>Furniture sold</p>
+            </div>
+            <div class="feature-card">
+                <strong>260+</strong>
+                <p>Variant Furniture</p>
+            </div>
         </div>
-        <div class="feature-card">
-            <strong>2</strong>
-            <p>Opened in the country</p>
-        </div>
-        <div class="feature-card">
-            <strong>10k+</strong>
-            <p>Furniture sold</p>
-        </div>
-        <div class="feature-card">
-            <strong>260+</strong>
-            <p>Variant Furniture</p>
-        </div>
-    </div>
     </header>
 </template>
 
@@ -92,6 +91,7 @@ header {
         background-color: rgba(226, 226, 226, 0.4);
     }
 }
+
 .features {
     position: absolute;
     max-width: 1200px;

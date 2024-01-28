@@ -17,7 +17,7 @@
         </Container>
     </nav>
     <!-- router outlet -->
-    <router-view></router-view>
+    <router-view/>
 </template>
 
 
