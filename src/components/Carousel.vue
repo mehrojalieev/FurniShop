@@ -76,7 +76,7 @@ export default {
     .shop-link {
         font-size: 16px;
         color: var(--secondary-color);
-        font-weight: 500;
+        // font-weight: 500;
     }
 }
 
