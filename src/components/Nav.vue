@@ -8,10 +8,10 @@
                     <img src="../assets/logo.svg" alt="" />
                 </div>
                 <ul class="nav__menu">
-                    <li><router-link to="/" class="item-link">Home</router-link></li>
-                    <li><router-link to="about" class="item-link">About</router-link></li>
-                    <li><router-link to="features" class="item-link">Features</router-link></li>
-                    <li><router-link to="contact" class="item-link">Contact</router-link></li>
+                    <li><a class="item-link" href="/">Home</a></li>
+                    <li><a class="item-link" href="">About</a></li>
+                    <li><a class="item-link" href="#features">Features</a></li>
+                    <li><a class="item-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </Container>
