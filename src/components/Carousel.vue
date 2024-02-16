@@ -3,7 +3,8 @@ import Container from '@/utils/Container.vue';
 import { RouterLink } from 'vue-router';
 import json from '../database/products.json'
 import { Swiper, SwiperSlide } from 'swiper/vue';
-console.log(json);
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 </script>
 <template>
     <Container>
@@ -14,7 +15,16 @@ console.log(json);
                 <router-link to="/" class="shop-link">Shop All</router-link>
             </div>
             <div class="swiper-container">
-                <swiper :loop="true" space-between="30" class="mySwiper">
+                <swiper
+                 autoplay="true"
+                   :loop="true"
+                    space-between="50"
+                     class="mySwiper"
+                     :autoplay="{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                                }"
+                     >
                     <swiper-slide v-for="i in json.carousel_data" class="swiper-slide">
                         <img :src="i.image">
                         <h3>{{ i.name }}</h3>
@@ -36,10 +46,24 @@ console.log(json);
                 <img src="../assets/serviceContent.png">
             </div>
         </div>
+
     </Container>
 </template>
 
 
+<script >
+export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      return {
+        modules: [Autoplay, Pagination, Navigation],
+      };
+    },
+  };
+</script>
 
 
 <style lang="scss" >
@@ -133,8 +157,8 @@ console.log(json);
     width: 100%;
 }
 
-.service-content{
-    h2{
+.service-content {
+    h2 {
         width: 558px;
         font-size: 40px;
         font-weight: 600;
@@ -143,7 +167,8 @@ console.log(json);
         color: var(--muted-text-color);
 
     }
-    p{
+
+    p {
         width: 570px;
         font-size: 19px;
         font-family: var(--saira-font);
@@ -152,12 +177,13 @@ console.log(json);
         color: var(--muted-text-color);
     }
 }
-.service-image{
+
+.service-image {
     width: 554px;
     height: 400px;
-    img{
+
+    img {
         width: 100%;
         height: 100%;
     }
-}
-</style>
+}</style>
