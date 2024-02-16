@@ -62,8 +62,6 @@ import Container from '@/utils/Container.vue';
 <style scoped lang="scss">
     footer{
         padding: 60px 0 20px;
-        margin-top: 150px;
-        /* height: 513px; */
         width: 100%;
         background-color: var(--muted-text-color);
     }

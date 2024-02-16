@@ -8,7 +8,7 @@
                 <button>Shop Now</button>
             </div>
         </Container>
-        <div class="features">
+        <div id="features" class="features">
             <div class="feature-card">
                 <strong>7</strong>
                 <p>Year Experience</p>
