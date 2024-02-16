@@ -50,6 +50,7 @@ header {
     min-height: 850px;
     background: url("../assets/hero_banner.png") no-repeat;
     background-size: cover;
+    background-position: center;
     background-color: gold;
 }
 
@@ -65,7 +66,7 @@ header {
         line-height: 76px;
         font-weight: 600;
         letter-spacing: 0.2px;
-        width: 880px;
+        max-width: 880px;
         text-align: center;
     }
 
@@ -74,7 +75,7 @@ header {
         color: #fff;
         font-size: 20px;
         line-height: 30px;
-        width: 620px;
+        max-width: 620px;
         text-align: center;
         letter-spacing: 0.2px;
     }
@@ -132,4 +133,17 @@ header {
         font-weight: 400;
     }
 }
+
+@media only screen and (max-width: 768px){
+    .hero__content{
+        h2{
+            font-size: 46px;
+            max-width: 600px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
 </style>

@@ -1,6 +1,24 @@
-[
-    {
-        "name": "Ceiling Light",
-        "images": "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/best-furniture-for-your-home-2022-section-1.jpg   "
-    }
-]
+{
+    "carousel_data": [
+        {
+            "name": "Ceiling Light",
+            "image": "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/best-furniture-for-your-home-2022-section-1.jpg   "
+        },
+        {
+            "name": "Ceiling Light",
+            "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnVybml0dXJlfGVufDB8fDB8fHww  "
+        },
+        {
+            "name": "Ceiling Light",
+            "image": "https://t3.ftcdn.net/jpg/02/71/05/60/360_F_271056073_C0tbpNLFbcGurqxoMXqPBrx8vzL9VLVY.jpg"
+        },
+        {
+            "name": "Ceiling Light",
+            "image": "https://www.shutterstock.com/image-photo/stylish-room-interior-comfortable-furniture-260nw-1485045323.jpg "
+        },
+        {
+            "name": "Ceiling Light",
+            "image": "https://cb.scene7.com/is/image/Crate/cb_mSC_20231226_Furniture_SectionalsV4?bfc=on&wid=672&qlt=80&op_sharpen=1  "
+        }
+    ]
+}
