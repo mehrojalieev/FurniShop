@@ -9,7 +9,7 @@
                 </div>
                 <ul class="nav__menu">
                     <li><a class="item-link" href="/">Home</a></li>
-                    <li><a class="item-link" href="">About</a></li>
+                    <li><a class="item-link" href="#about">About</a></li>
                     <li><a class="item-link" href="#features">Features</a></li>
                     <li><a class="item-link" href="#contact">Contact</a></li>
                 </ul>

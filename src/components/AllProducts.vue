@@ -19,6 +19,7 @@ console.log(Products.items.products);
             <div class="products__card-container">
                 <div v-for="product in Products.items.products" class="product__card">
                     <img :src="product.image">
+                    
                     <button class="add-btn"><span class="material-symbols-outlined">add</span></button>
                     <h4>{{product.name}}</h4>
                     <div class="price-info">
