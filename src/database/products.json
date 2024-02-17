@@ -1,24 +1,69 @@
 {
-    "carousel_data": [
-        {
-            "name": "Ceiling Light",
-            "image": "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/best-furniture-for-your-home-2022-section-1.jpg   "
-        },
-        {
-            "name": "Ceiling Light",
-            "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnVybml0dXJlfGVufDB8fDB8fHww  "
-        },
-        {
-            "name": "Ceiling Light",
-            "image": "https://t3.ftcdn.net/jpg/02/71/05/60/360_F_271056073_C0tbpNLFbcGurqxoMXqPBrx8vzL9VLVY.jpg"
-        },
-        {
-            "name": "Ceiling Light",
-            "image": "https://www.shutterstock.com/image-photo/stylish-room-interior-comfortable-furniture-260nw-1485045323.jpg "
-        },
-        {
-            "name": "Ceiling Light",
-            "image": "https://cb.scene7.com/is/image/Crate/cb_mSC_20231226_Furniture_SectionalsV4?bfc=on&wid=672&qlt=80&op_sharpen=1  "
-        }
-    ]
+    "items": {
+        "products": [
+            {
+                "image":"https://media.istockphoto.com/id/1358287896/photo/black-modern-pendant-electric-lamp.jpg?s=612x612&w=0&k=20&c=OYCr_VA3HP0krvqG-QbL6YAmWIAD7FKNxCPsHO4uf-w=",
+                "name": "Ceiling Light",
+                "price": 71.00
+            },
+            {
+                "image":"https://atlas-content-cdn.pixelsquid.com/stock-images/modern-chair-3y6veB8-600.jpg",
+                "name": "Wood Chair",
+                "price": 123.40
+            },
+            {
+                "image":"https://quildinc.co.uk/cdn/shop/products/s-l800_b9f2e120-c891-45b7-a746-2b2acbdda23c_2048x2048.jpg?v=1664123728",
+                "name": "L-Shaped Corner",
+                "price": 50.20
+            },
+            {
+                "image":"https://hipvan-images-production.imgix.net/product-images/c9f7181e-9dbc-4884-8449-a85028e30749/Apartment-Sofas-by-HipVan--Emma-Loveseat--Dusk-Blue-14.png?fm=jpg&auto=format%2Ccompress&cs=srgb&fit=fill&bg=ffffff&w=800&h=800",
+                "name": "Sofa",
+                "price": 123.00
+            },
+            {
+                "image":"https://previews.123rf.com/images/magraphics/magraphics2003/magraphics200300035/142774453-empty-wardrobe-with-sliding-doors-on-white-background.jpg",
+                "name": "Cupboard",
+                "price": 54.00
+            },
+            {
+                "image":"https://www.pngitem.com/pimgs/m/286-2868832_modern-chair-png-transparent-background-png-download.png",
+                "name": "Modern Chair",
+                "price": 78.10
+            },
+            {
+                "image":"https://www.assets.signify.com/is/image/PhilipsLighting/b602fc1c67f547cdb231ac9100a67043?$jpglarge$&wid=1250",
+                "name": "Ceiling Light",
+                "price": 220.00
+            },
+            {
+                "image":"https://www.shutterstock.com/image-photo/black-fabric-sofa-on-brushed-260nw-1930911263.jpg",
+                "name": "Modern Black Sofa",
+                "price": 75.00
+            }
+        ],
+           
+        "trending_furniture": [
+                  {
+                      "name": "Ceiling Light",
+                      "image": "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/best-furniture-for-your-home-2022-section-1.jpg   "
+                  },
+                  {
+                      "name": "Ceiling Light",
+                      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnVybml0dXJlfGVufDB8fDB8fHww  "
+                  },
+                  {
+                      "name": "Ceiling Light",
+                      "image": "https://t3.ftcdn.net/jpg/02/71/05/60/360_F_271056073_C0tbpNLFbcGurqxoMXqPBrx8vzL9VLVY.jpg"
+                  },
+                  {
+                      "name": "Ceiling Light",
+                      "image": "https://www.shutterstock.com/image-photo/stylish-room-interior-comfortable-furniture-260nw-1485045323.jpg "
+                  },
+                  {
+                      "name": "Ceiling Light",
+                      "image": "https://cb.scene7.com/is/image/Crate/cb_mSC_20231226_Furniture_SectionalsV4?bfc=on&wid=672&qlt=80&op_sharpen=1  "
+                  }
+             ]
+    }
 }

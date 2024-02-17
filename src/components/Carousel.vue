@@ -25,7 +25,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
                             disableOnInteraction: false,
                                 }"
                      >
-                    <swiper-slide v-for="i in json.carousel_data" class="swiper-slide">
+                    <swiper-slide v-for="i in json.items.trending_furniture" class="swiper-slide">
                         <img :src="i.image">
                         <h3>{{ i.name }}</h3>
                     </swiper-slide>

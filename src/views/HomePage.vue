@@ -2,6 +2,7 @@
     <Hero/>
     <Models/>
     <Carousel/>
+    <AllProducts/>
     <About/>
     <Contact/>
 </template>
@@ -12,6 +13,7 @@ import Carousel from "@/components/Carousel.vue";
 import Models from "@/components/Models.vue"
 import Contact from "@/components/Contact.vue";
 import About from "@/components/About.vue";
+import AllProducts from "@/components/AllProducts.vue";
 export default {
   
     components: {
@@ -19,7 +21,8 @@ export default {
     Carousel,
     Models,
     Contact,
-    About
+    About,
+    AllProducts
 }
 }
 </script>
