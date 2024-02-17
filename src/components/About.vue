@@ -5,7 +5,7 @@ console.log(Comments.people_comments);
 </script>
 <template>
     <Container>
-        <div class="about-wrapper">
+        <div id="about" class="about-wrapper">
             <div class="about-content">
                 <h2>What people are saying about us</h2>
                 <swiper
@@ -18,7 +18,6 @@ console.log(Comments.people_comments);
                      :pagination="{
                       clickable: true,
                     }"
-                    :navigation="true"
                     :modules="modules"
                     class="mySwiper"
                  >
