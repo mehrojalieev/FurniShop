@@ -1,10 +1,10 @@
 <template>
     <Hero/>
     <Models/>
-    <!-- <Carousel/>
-    <AllProducts/>
-    <About/>
-    <Contact/> -->
+    <Carousel/>
+    <!-- <AllProducts/> -->
+    <!-- <About/> -->
+    <!-- <Contact/> -->
 </template>
 
 <script>
