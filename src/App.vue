@@ -1,6 +1,6 @@
 <template>
   <router-view/>
-  <Footer/>
+  <!-- <Footer/> -->
 </template>
 
 
