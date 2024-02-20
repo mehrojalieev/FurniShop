@@ -1,5 +1,7 @@
 
-
+<script setup>
+    import { CoHamburgerMenu } from "oh-vue-icons/icons";
+</script>
 <template>
     <nav>
         <Container>
@@ -7,6 +9,7 @@
                 <div class="nav__logo">
                     <img src="../assets/logo.svg" alt="" />
                 </div>
+                <button  class="menu__hamburger-btn nav__close-btn"><span class="material-symbols-outlined">menu</span></button>
                 <ul class="nav__menu">
                     <li><a class="item-link" href="/">Home</a></li>
                     <li><a class="item-link" href="#about">About</a></li>
@@ -69,4 +72,19 @@ nav {
 
 
 }
+.nav__close-btn{
+    background: transparent;
+    border: none;
+    display: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 716px) {
+        .nav__menu{
+            display: none;
+        }
+        .nav__close-btn{
+            display: block;
+        }
+    }
 </style>

@@ -1,10 +1,10 @@
 <template>
     <Hero/>
     <Models/>
-    <Carousel/>
+    <!-- <Carousel/>
     <AllProducts/>
     <About/>
-    <Contact/>
+    <Contact/> -->
 </template>
 
 <script>

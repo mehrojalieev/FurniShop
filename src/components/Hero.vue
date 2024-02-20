@@ -8,7 +8,7 @@
                 <button>Shop Now</button>
             </div>
         </Container>
-        <div id="features" class="features">
+        <!-- <div id="features" class="features">
             <div class="feature-card">
                 <strong>7</strong>
                 <p>Year Experience</p>
@@ -25,7 +25,7 @@
                 <strong>260+</strong>
                 <p>Variant Furniture</p>
             </div>
-        </div>
+        </div> -->
     </header>
 </template>
 
@@ -138,12 +138,53 @@ header {
     .hero__content{
         h2{
             font-size: 46px;
-            max-width: 600px;
         }
         p{
             font-size: 18px;
         }
     }
 }
+
+@media only screen and (max-width: 544px){
+    header{
+        background-position: right;
+    }
+    .hero__content{
+        h2{
+            font-size: 40px;
+            line-height: 66px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 28px;
+        }
+        button{
+            padding: 10px 80px;
+            font-size: 18px;
+            margin-top: 40px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 478px){
+    .hero__content{
+        h2{
+            font-size: 36px;
+            line-height: 56px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 26px;
+        }
+        button{
+            padding: 9px 70px;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    }
+}
+
+
 
 </style>
