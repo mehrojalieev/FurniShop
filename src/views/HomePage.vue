@@ -2,9 +2,9 @@
     <Hero/>
     <Models/>
     <Carousel/>
-    <!-- <AllProducts/> -->
-    <!-- <About/> -->
-    <!-- <Contact/> -->
+    <AllProducts/>
+    <About/>
+    <Contact/>
 </template>
 
 <script>

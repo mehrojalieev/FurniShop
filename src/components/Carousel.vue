@@ -1,7 +1,7 @@
 <script setup>
-import Container from '@/utils/Container.vue';
 import { RouterLink } from 'vue-router';
 import json from '../database/products.json'
+import Container from '@/utils/Container.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -148,6 +148,7 @@ export default {
     }
 }
 
+// SERVICE COMPONENT STYLES
 .service__content-wrapper {
     margin-top: 130px;
     display: flex;
@@ -189,6 +190,10 @@ export default {
         object-fit: cover;
     }
 }
+
+
+// -------------- COMPONENT RESPONSIVE CODES -----------------
+
 @media only screen and (max-width: 968px){
     .content{
         max-width: 180px;

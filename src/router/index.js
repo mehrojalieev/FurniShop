@@ -1,10 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePageVue from "@/views/HomePage.vue";
-import About from "../views/About.vue"
-import Contact from "../views/Contact.vue"
 import NotFoundVue from "@/views/NotFound.vue";
+import HomePageVue from "@/views/HomePage.vue";
+import Contact from "../views/Contact.vue";
+import About from "../views/About.vue";
+
+
 const router = createRouter({
     history: createWebHistory(),
+
     routes: [
         {
             path: '/',
@@ -12,14 +15,19 @@ const router = createRouter({
             component: HomePageVue
         },  
         {
+            path: '/product/:product_id',
+            name: "Single_Product",
+            component: () => import('../views/SingleProduct.vue')
+        },
+        {
             path: "/about",
             name: 'About',
             component: About
         },
         {
             path: "/contact",
+            name: 'Contact',
             component: Contact
-            
         },
         {
             path: '/:catchAll(.*)',

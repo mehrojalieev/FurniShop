@@ -3,33 +3,30 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
 // import Vue from 'vue'
-import Vuex from 'vuex'
-
+import { createStore } from 'vuex'
 // Vue.use(Vuex)
 
 
-export default new Vuex.Store({
-    state: {
-        todos: [
-            {
-                title: "Product item",
-                added: false
-            }
-        ]
-    },
-    getters: {
-
+const store = createStore({
+    state(){
+        return {
+            counter: 0
+        }
     },
     mutations: {
-
+        increment(state, payload){
+            state.counter = state.counter + payload
+        }
     },
-    actions: {
-        
-    }
+    getters: {
+        getCounter(state){
+            return state.counter
+        }
+    },
 })
 
 
 const app = createApp(App)
 app.use(router)
-app.use(Vuex)
+app.use(store)
 app.mount('#app')
