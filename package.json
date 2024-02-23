@@ -12,10 +12,12 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.10",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
     "oh-vue-icons": "^1.0.0-rc3",
     "sass": "^1.70.0",
     "swiper": "^11.0.5",
-    "vue": "^3.3.11",
+    "vue": "^3.4.19",
     "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },
