@@ -23,7 +23,7 @@ console.log(Products.items.products);
                     class="product__card-link"
                      :to="{
                          name: 'Single_Product',
-                        //  query: {product_name: product.name},
+                         query: {product_name: product.name},
                          params: {product_id:  `${product.id}` }
                           }"
                      >
@@ -41,6 +41,9 @@ console.log(Products.items.products);
         </div>
     </Container>
 </template>
+
+
+
 
 <style scoped lang="scss">
 .allproduct-wrapper {
