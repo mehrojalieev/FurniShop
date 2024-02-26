@@ -3,7 +3,7 @@
     <footer>
         <Container>
             <div class="footer-header">
-                <img src="../assets/logo.svg" alt="Logo">
+                <img class="footer__logo" src="../assets/logo.svg" alt="Logo">
                 <div class="footer__social-action">
                     <img src="../assets/instagram.svg">
                     <img src="../assets/facebook.svg">
@@ -72,7 +72,7 @@ import Container from '@/utils/Container.vue';
         display: flex;
         justify-content: space-between;
         border-bottom: 2px solid #fff;
-        padding-bottom: 60px;
+        padding:0 10px 60px;
     }
     .footer__social-action{
         display: flex;
@@ -84,8 +84,9 @@ import Container from '@/utils/Container.vue';
         width: 100%;
         max-width: 1200px;
         margin: auto;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 10px;
         ul{
             display: flex;
             flex-direction: column;
@@ -109,4 +110,119 @@ import Container from '@/utils/Container.vue';
         letter-spacing: 1px;
         text-align: center;
     }
+
+    @media only screen and (max-width: 838px){
+        .footer__menu-container{
+            column-gap: 20px !important;
+            padding: 0 1rem;
+            ul{
+            row-gap: 20px;
+            li{
+                font-size: 14px;
+            }
+            
+        }
+        }
+    }
+    @media only screen and (max-width: 780px){
+        .footer__menu-container{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+
+        }
+    }
+    @media only screen and (max-width: 780px){
+        .footer-header{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #fff;
+        padding:0 10px 50px;
+    }
+    .footer__social-action{
+        column-gap: 15px;
+        img{
+                width: 45px;
+                height: 45px;
+            }
+
+    }
+        .footer__menu-container{
+        margin-top: 40px  !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
+
+        }
+    }
+    @media only screen and (max-width: 530px){
+
+    .footer__social-action{
+        column-gap: 15px;
+        img{
+                width: 40px;
+                height: 40px;
+            }
+
+    }
+        .footer__menu-container{
+        margin-top: 40px  !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 70px;
+        ul{
+            row-gap: 15px;
+            list-style-type: none;
+            li{
+                font-size: 13px;
+                color: #fff;
+                font-weight: 500;
+            }
+            li:first-child{
+                font-size: 18px ;
+            }
+        }
+
+        }
+    }
+    @media only screen and (max-width: 487px){
+
+        .footer-header{
+            flex-direction: column;
+        border-bottom: 2px solid #fff;
+        padding:0 10px 60px;
+        .footer__logo{
+            width: 220px;
+            height: 100px;
+        }
+        .footer__social-action{
+        display: flex;
+        justify-content: space-evenly;
+                img{
+                    width: 55px;
+                    height: 50px;
+                }
+    }
+    }
+.footer__social-action{
+    column-gap: 15px;
+    img{
+            width: 40px;
+            height: 40px;
+        }
+
+}
+    .footer__menu-container{
+    grid-template-columns: repeat(2, 1fr);
+    ul{
+        row-gap: 15px;
+        li{
+            font-size: 15px;
+        }
+        li:first-child{
+            font-weight: 700;
+            font-size: 22px ;
+        }
+    }
+
+    }
+}
 </style>

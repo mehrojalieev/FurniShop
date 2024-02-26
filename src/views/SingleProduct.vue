@@ -51,9 +51,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
       <swiper :spaceBetween="60" :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
-        }"
-       :pagination="{  clickable: true, }"
-  :modules="modules" class="mySwiper category-swiper">
+      }" :pagination="{ clickable: true, }" :modules="modules" class="mySwiper category-swiper">
         <swiper-slide class="category-slide" v-for="(prod, index) in Products.items.products" :key="index">
           <div class="category-image">
             <img :src="prod.image" alt="">
@@ -69,9 +67,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
               <span class="material-symbols-outlined">star</span>
             </div>
           </div>
-          <p class="category-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ex harum maiores est delectus ullam.</p>
+          <p class="category-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ex harum maiores
+            est delectus ullam.</p>
           <div class="category__card-price">
-            <p>${{prod.price}} USD</p>
+            <p>${{ prod.price }} USD</p>
             <strong>$200 USD</strong>
           </div>
         </swiper-slide>
@@ -119,29 +118,34 @@ export default {
   margin: 2rem 0;
   width: 100%;
 
-  .product-image {
-    width: 450px;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
+
+
+
+}
+
+.product-image {
+  max-width: 450px;
+  height: 440px;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.single__product-content {
+  h2 {
+    font-size: 44px;
   }
 
-  .single__product-content {
-    h2 {
-      font-size: 44px;
-    }
-
-    p {
-      font-size: 15px;
-      font-weight: 400;
-      max-width: 550px;
-    }
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 550px;
   }
 }
 
@@ -230,17 +234,20 @@ export default {
     cursor: pointer;
   }
 }
-  // -------- CETEGORY SWIPER STYLES
+
+// -------- CETEGORY SWIPER STYLES
 .product__category-wrapper {
   width: 100%;
   margin-bottom: 50px;
   margin-top: 120px;
 }
-.category-title{
+
+.category-title {
   font-size: 40px;
   margin-bottom: 40px;
 }
-.category-swiper .swiper-slide{
+
+.category-swiper .swiper-slide {
   height: fit-content !important;
 }
 
@@ -254,61 +261,314 @@ export default {
   .category-image {
     position: relative;
     width: 100% !important;
-    padding: 10px ;
-    img{
+    padding: 10px;
+
+    img {
       width: 100%;
       height: 300px;
     }
-    .category__like-btn{
+
+    .category__like-btn {
       position: absolute;
       top: 0px;
       right: 0px;
       background-color: transparent;
       border: none;
-      span{
+
+      span {
         font-size: 28px;
         cursor: pointer;
       }
     }
   }
 }
-.slide-header{
+
+.slide-header {
   display: flex !important;
-  justify-content: space-between !important ; 
-  h4{
+  justify-content: space-between !important;
+
+  h4 {
     font-size: 23px;
   }
-  .stars{
+
+  .stars {
     display: flex;
     align-items: center;
-    span{
+
+    span {
       font-size: 20px;
       color: gold;
     }
   }
 }
-.category-description{
+
+.category-description {
   font-size: 15px;
   margin-top: 10px;
   line-height: 21px;
 }
-.category__card-price{
+
+.category__card-price {
   display: flex;
   align-items: center;
   column-gap: 15px;
   margin-top: 15px;
-  p{
+
+  p {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1px;
   }
-  strong{
+
+  strong {
     font-size: 15px;
     color: #696767;
     font-weight: 500;
     text-decoration: line-through;
   }
 }
+
+@media only screen and (max-width: 1100px) {
+  .single__product-content {
+    h2 {
+      font-size: 42px !important;
+    }
+
+    p {
+      font-size: 15px;
+      max-width: 510px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  .product-image {
+    max-width: 400px;
+    height: 400px;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+.price-info {
+  column-gap: 20px;
+
+  p {
+    font-size: 21px !important;
+  }
+
+  strong {
+    font-size: 16px;
+  }
+}
+  .btns-action {
+    button {
+      column-gap: 8px;
+      padding: 7px 18px;
+      font-size: 17px;
+    }
+
+    .add__wishlist-btn {
+      padding: 7px 13px !important;
+
+    }
+  }
+}
+  @media only screen and (max-width: 928px){
+    .product-image {
+    max-width: 410px;
+    height: 370px;
+    padding: 10px;
+  }
+    .single__product-content {
+    h2 {
+      font-size: 40px !important;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+  }
+  @media only screen and (max-width: 830px){
+    .product-image {
+    max-width: 370px;
+    height: 350px;
+    padding: 10px;
+  }
+    .single__product-content {
+    h2 {
+      font-size: 38px !important;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+  .feedback-action {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  .stars {
+    span {
+      color: gold;
+      font-size: 20px;
+    }
+  }
+
+  p {
+    color: #1d1c1c !important;
+    font-size: 16px !important;
+  }
+}
+  .price-info {
+  p {
+    font-size: 20px !important;
+  }
+
+  strong {
+    font-size: 15px;
+  }
+}
+  .btns-action {
+    button {
+      column-gap: 8px;
+      padding: 7px 16px;
+      font-size: 17px;
+    }
+
+    .add__wishlist-btn {
+      padding: 6px 11px !important;
+
+    }
+  }
+  }
+  @media only screen and (max-width: 728px){
+    .product-image {
+    max-width: 370px;
+    height: 360px;
+    padding: 10px;
+  }
+    .single__product-content {
+    h2 {
+      font-size: 38px !important;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 19px;
+      max-width: 350px;
+    }
+  }
+  .feedback-action {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  .stars {
+    span {
+      color: gold;
+      font-size: 20px;
+    }
+  }
+
+  p {
+    color: #1d1c1c !important;
+    font-size: 16px !important;
+  }
+}
+  .price-info {
+  p {
+    font-size: 20px !important;
+  }
+
+  strong {
+    font-size: 15px;
+  }
+}
+  .btns-action {
+    button {
+
+      column-gap: 2px;
+      padding: 9px 15px;
+      font-size: 14px;
+      span{font-size: 17px;}
+    }
+
+    .add__wishlist-btn {
+      padding: 6px 11px !important;
+
+    }
+  }
+  }
+  @media only screen and (max-width: 707px){
+    .product-image {
+    max-width: 300px !important;
+    height: 360px;
+    padding: 10px;
+  }
+    .single__product-content {
+      
+    h2 {
+      font-size: 36px !important;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 320px;
+    }
+  }
+  .feedback-action {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 10px;
+
+  .stars {
+    span {
+      color: gold;
+      font-size: 20px;
+    }
+  }
+
+  p {
+    color: #1d1c1c !important;
+    font-size: 15px !important;
+  }
+}
+  .price-info {
+  p {
+    font-size: 18px !important;
+  }
+
+  strong {
+    font-size: 14px;
+  }
+}
+  .btns-action {
+    column-gap: 18px;
+    button {
+
+      column-gap: 2px;
+      padding: 9px 15px;
+      font-size: 14px;
+      span{font-size: 17px;}
+    }
+
+    .add__wishlist-btn {
+      padding: 7px 11px !important;
+
+    }
+  }
+  }
 </style>
 
 <!-- $route.query.query_name => Bu orqali querydan yuborilgan ma'lumotni olish mumkin -->
