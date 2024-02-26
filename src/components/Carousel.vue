@@ -421,7 +421,7 @@ export default {
 }
 .service-image {
     margin-top: 20px;
-    max-width: 470px;
+    max-width: 415px;
     height: 300px;
     padding: 0 10px;
 
@@ -459,6 +459,11 @@ export default {
         line-height: 24px;
     }
 }
+}
+@media only screen and (max-width: 400px){
+    .service-image{
+        max-width: 390px;
+    }
 }
 @media only screen and (max-width: 360px){
     .content{

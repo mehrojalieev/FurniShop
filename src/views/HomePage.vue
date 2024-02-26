@@ -3,7 +3,7 @@
     <Models/>
     <Carousel/>
     <AllProducts/>
-    <About/>
+    <!-- <About/> -->
     <Contact/>
 </template>
 
