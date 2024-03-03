@@ -384,7 +384,7 @@ export default {
     }
 }
 .service-image {
-    width: 500px;
+    max-width: 500px;
     height: 300px;
 }
 }
@@ -462,7 +462,7 @@ export default {
 }
 @media only screen and (max-width: 400px){
     .service-image{
-        max-width: 390px;
+        max-width: 370px;
     }
 }
 @media only screen and (max-width: 360px){
