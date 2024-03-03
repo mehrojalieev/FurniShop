@@ -87,7 +87,7 @@ export default {
   components: { Swiper, SwiperSlide },
   setup() {
     return {
-      modules: [Autoplay, Pagination, Navigation],
+      modules: [Autoplay, Pagination],
     };
   },
   data() {

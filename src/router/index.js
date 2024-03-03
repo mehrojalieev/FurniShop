@@ -13,6 +13,7 @@ const router = createRouter({
             path: '/',
             name: "Home",
             component: HomePageVue
+            
         },  
         {
             path: '/product/:product_id',
@@ -28,6 +29,11 @@ const router = createRouter({
             path: "/contact",
             name: 'Contact',
             component: Contact
+        },
+        {
+            path: "/cart",
+            name: 'Cart',
+            component: () => import('../views/Cart.vue')
         },
         {
             path: '/:catchAll(.*)',
