@@ -1,11 +1,10 @@
 <script >
-import Products from '@/database/products.json'
-import Container from '@/utils/Container.vue';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Container from '@/utils/Container.vue';
+import Products from '@/database/products.json'
+import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 export default {
@@ -18,14 +17,15 @@ export default {
   },
   data() {
     return {
-      singleProduct: {
-        name: {}
-      }
+      singleProduct: {}
     }
   },
   methods:{
           addCart(){
             this.$store.dispatch('addToStoreData', this.singleProduct)
+          },
+          removeCart(index){
+            this.$store.dispatch('removeCartStore', index)
           }
         },
 computed: {
@@ -72,7 +72,8 @@ computed: {
           <strong>$500 USD</strong>
         </div>
         <div class="btns-action">
-          <button @click="addCart" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
+          <button v-if="this.$store.getters.getProduct.includes(singleProduct.id)"   @click="removeCart(this.singleProduct)" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Remove from cart</button>
+          <button v-else   @click="addCart" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
           <button class="add__wishlist-btn"> <span class="material-symbols-outlined">favorite</span> Add to
             Wishlist</button>
 

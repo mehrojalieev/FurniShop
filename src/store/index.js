@@ -8,7 +8,6 @@ const store = createStore({
     mutations: {
         addData(state, payload){
             let cart_index;
-            console.log(payload);
             cart_index = state.cart_data.findIndex(cart => cart.id === payload.id)
             if(cart_index === -1){
                 state.cart_data = [...state.cart_data, payload]
