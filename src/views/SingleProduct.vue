@@ -22,17 +22,13 @@ export default {
   },
   methods:{
           addCart(){
-            this.$store.dispatch('addToStoreData', this.singleProduct)
+            this.$store.commit('addData', this.singleProduct)
           },
           removeCart(index){
-            this.$store.dispatch('removeCartStore', index)
+            this.$store.commit('removeCart', index)
           }
         },
-computed: {
-  data(){
-    return this.$store.getters.getProduct
-  }
-},
+
   mounted() {
     if (Products.items.products.filter(f => f.id === this.$route.params.product_id)) {
       this.singleProduct = Products.items.products.find(f => f.id == this.$route.params.product_id)
@@ -72,8 +68,8 @@ computed: {
           <strong>$500 USD</strong>
         </div>
         <div class="btns-action">
-          <button v-if="this.$store.getters.getProduct.includes(singleProduct.id)"   @click="removeCart(this.singleProduct)" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Remove from cart</button>
-          <button v-else   @click="addCart" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
+          <button v-if="this.$store?._state?.data?.cart_data?.findIndex(item => item.id === this.singleProduct.id) === -1"  @click="addCart" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
+          <button  v-else  @click="removeCart(this.singleProduct)" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Remove from cart</button>
           <button class="add__wishlist-btn"> <span class="material-symbols-outlined">favorite</span> Add to
             Wishlist</button>
 
