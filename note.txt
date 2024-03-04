@@ -1,0 +1,4 @@
+Vuex Store
+state => data()
+mutations => methods()
+getters => computed()

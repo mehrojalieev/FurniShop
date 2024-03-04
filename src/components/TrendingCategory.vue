@@ -4,13 +4,13 @@
   import 'swiper/css/navigation';
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-  import json from '../database/products.json';
-console.log(json);
+  import { mapActions } from 'vuex';
     export default {
         components:{
             Swiper,
-      SwiperSlide,
+        SwiperSlide,
         },
+       
         setup(){
             return {
                 modules: [Autoplay, Pagination, Navigation],
@@ -25,9 +25,9 @@ console.log(json);
         <swiper
     :spaceBetween="40"
     :slidesPerView="2"
-    :centeredSlides="false"
+    :centeredSlides="true"
     :autoplay="{
-      delay: 22500,
+      delay: 2500,
       disableOnInteraction: false,
     }"
     :pagination="{
@@ -37,7 +37,7 @@ console.log(json);
     :modules="modules"
     class="mySwiper"
   >
-    <swiper-slide  >Slide 1
+    <swiper-slide  v-for="t in json" >{{ t.name }}
     </swiper-slide>
   </swiper>
     </div>

@@ -1,4 +1,4 @@
-<script setup>
+<script >
 import Products from '@/database/products.json'
 import Container from '@/utils/Container.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -7,11 +7,46 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
+import { mapActions } from 'vuex';
+
+export default {
+  components: { Swiper, SwiperSlide },
+        
+  setup() {
+    return {
+      modules: [Autoplay, Pagination],
+    };
+  },
+  data() {
+    return {
+      singleProduct: {
+        name: {}
+      }
+    }
+  },
+  methods:{
+          addCart(){
+            this.$store.dispatch('addToStoreData', this.singleProduct)
+          }
+        },
+computed: {
+  data(){
+    return this.$store.getters.getProduct
+  }
+},
+  mounted() {
+    if (Products.items.products.filter(f => f.id === this.$route.params.product_id)) {
+      this.singleProduct = Products.items.products.find(f => f.id == this.$route.params.product_id)
+    }
+    else { console.log(false); }
+  }
+}
 </script>
 
 
 <template>
   <Container>
+    <h2>Data Store {{data}}</h2>
     <div class="single__product-wrapper">
       <div class="product-image">
         <img :src="singleProduct.image">
@@ -39,7 +74,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
           <strong>$500 USD</strong>
         </div>
         <div class="btns-action">
-          <button class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
+          <button @click="addCart" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
           <button class="add__wishlist-btn"> <span class="material-symbols-outlined">favorite</span> Add to
             Wishlist</button>
 
@@ -52,7 +87,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
         delay: 2500,
         disableOnInteraction: false,
       }" :pagination="{ clickable: true, }" :modules="modules" class="mySwiper category-swiper">
-        <swiper-slide class="category-slide" v-for="(prod, index) in Products.items.products" :key="index">
+        <swiper-slide class="category-slide" v-for="(prod, index) in Products?.items?.products" :key="index">
           <div class="category-image">
             <img :src="prod.image" alt="">
             <button class="category__like-btn"><span class="material-symbols-outlined">favorite</span></button>
@@ -81,32 +116,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 </template>
 
 
-<script>
 
-export default {
-  components: { Swiper, SwiperSlide },
-  setup() {
-    return {
-      modules: [Autoplay, Pagination],
-    };
-  },
-  data() {
-    return {
-      singleProduct: {
-        name: {}
-      }
-    }
-  },
-
-  mounted() {
-    if (Products.items.products.filter(f => f.id === this.$route.params.product_id)) {
-      this.singleProduct = Products.items.products.find(f => f.id == this.$route.params.product_id)
-      console.log(this.singleProduct);
-    }
-    else { console.log(false); }
-  }
-}
-</script> 
 
 
 
