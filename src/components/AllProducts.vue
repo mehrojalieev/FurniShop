@@ -2,7 +2,6 @@
 import Container from '@/utils/Container.vue';
 import Products from '@/database/products.json'
 import { RouterLink } from 'vue-router';
-console.log(Products.items.products);
 
 </script>
 

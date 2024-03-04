@@ -1,7 +1,6 @@
 <script setup>
 import Container from '@/utils/Container.vue';
 import Comments from "../database/comments.json"
-console.log(Comments.people_comments);
 </script>
 <template>
     <Container>
