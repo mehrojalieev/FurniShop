@@ -3,28 +3,26 @@
     import {RouterLink} from 'vue-router'
 import Container from '../utils/Container.vue'
     export default {
-        data(){
-            return {
-                cartData: []
-            }
-        },
-        computed: {
-            DataFromStore(){
-                return this.$store.getters.getProduct
-            }
-        },
+        // computed: {
+        //     DataFromStore(){
+        //         return this.$store.getters.getProduct
+        //     }
+        // },
         methods: {
             removeCart(index){
-                this.$store.dispatch('removeCartStore', index )
+                this.$store.commit('removeCart', index )
             }
+        },
+        mounted() {
+            console.log(this.$store._state.data.cart_data)
         }
     }
 </script>
 
 <template>
     <Container>
-        <div v-if="DataFromStore.length > 0" class="cart-wrapper">
-            <div v-for="(cart, index) in DataFromStore" :key="index" class="cart-box">
+        <div v-if="this.$store?._state.data.cart_data.length > 0" class="cart-wrapper">
+            <div v-for="(cart, index) in  this.$store._state.data.cart_data" :key="index" class="cart-box">
 
            <router-link :to="{ name: 'Single_Product', params: {product_id:  `${cart.id}` } }">
             <button class="add__like-btn"><span class="material-symbols-outlined">favorite</span></button>
