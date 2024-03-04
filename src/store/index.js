@@ -1,9 +1,4 @@
-// import Vue from 'vue'
-// import Vuex from 'vuex'
 import { createStore } from 'vuex'
-
-// Vue.use(Vuex)
-
 
 const store = createStore({
     state: {
@@ -19,11 +14,17 @@ const store = createStore({
                 state.cart_data = [...state.cart_data, payload]
 
             }
+        },
+        removeCart(state, cartIndex){
+            state.cart_data.splice( cartIndex, 1 )
         }
     },
     actions: {
         addToStoreData({commit}, payload){
                 commit('addData', payload)
+            },
+            removeCartStore({commit}, cartIndex){
+                commit('removeCart', cartIndex)
             }
     },
     getters: {

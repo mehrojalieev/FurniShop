@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
-import { mapActions } from 'vuex';
 
 export default {
   components: { Swiper, SwiperSlide },
@@ -46,7 +45,6 @@ computed: {
 
 <template>
   <Container>
-    <h2>Data Store {{data}}</h2>
     <div class="single__product-wrapper">
       <div class="product-image">
         <img :src="singleProduct.image">

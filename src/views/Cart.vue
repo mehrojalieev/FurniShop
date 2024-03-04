@@ -1,10 +1,21 @@
 <script>
-    import { RouterLink } from 'vue-router';
+
+    import {RouterLink} from 'vue-router'
 import Container from '../utils/Container.vue'
     export default {
+        data(){
+            return {
+                cartData: []
+            }
+        },
         computed: {
             DataFromStore(){
                 return this.$store.getters.getProduct
+            }
+        },
+        methods: {
+            removeCart(index){
+                this.$store.dispatch('removeCartStore', index )
             }
         }
     }
@@ -13,9 +24,12 @@ import Container from '../utils/Container.vue'
 <template>
     <Container>
         <div v-if="DataFromStore.length > 0" class="cart-wrapper">
-           <div v-for="cart in DataFromStore" class="cart-box">
+            <div v-for="(cart, index) in DataFromStore" :key="index" class="cart-box">
+
+           <router-link :to="{ name: 'Single_Product', params: {product_id:  `${cart.id}` } }">
             <button class="add__like-btn"><span class="material-symbols-outlined">favorite</span></button>
                 <img :src="cart.image" :alt="cart.name">
+            </router-link>
                 <h3>{{cart.name}}</h3>
                 <div class="price-info">
                     <p>Price:</p>
@@ -24,10 +38,12 @@ import Container from '../utils/Container.vue'
                 </div>
                 <div class="box-action">
                     <button class="purchase-btn">Purchase</button>
-                    <button class="remove__cart-btn">Remove</button>
+                    <button @click="removeCart(index)" class="remove__cart-btn">Remove</button>
                 </div>
-           </div>
         </div>
+
+        </div>
+        
         <div v-else class="empty__cart-wrapper">
             <h2>Your Shopping Cart Is Empty</h2>
             <span class="material-symbols-outlined">shopping_cart</span>
