@@ -310,9 +310,9 @@ import Container from '@/utils/Container.vue';
        }
    }
    }
-   @media only screen and (max-width: 445px){
+   @media only screen and (max-width: 402px){
    .contact__wrapper-banner{
-    min-height: 280px;
+    min-height: 260px;
    }
    .contact-container{
        margin-top: 40px;
@@ -320,7 +320,7 @@ import Container from '@/utils/Container.vue';
    .contact-content{
        h2{
            font-size: 28px;
-           max-width: 280px;
+           max-width: 240px;
            line-height: 36px;
        }
  
@@ -328,8 +328,8 @@ import Container from '@/utils/Container.vue';
    .contact-form{
        height: 42px;
        input{
-           width: 230px;
-           font-size: 15px;
+           width: 170px;
+           font-size: 14px;
    
        }
        button{
@@ -337,6 +337,52 @@ import Container from '@/utils/Container.vue';
            font-size: 14px;
        
        }
+   }
+   }
+
+   @media only screen and (max-width: 338px){
+   .contact__wrapper-banner{
+    min-height: 240px;
+   }
+   .contact-container{
+       margin-top: 40px;
+   }
+   .contact-content{
+       h2{
+           font-size: 24px;
+           max-width: 240px;
+           line-height: 34px;
+       }
+ 
+   }
+   .contact-form{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+       height: 72px;
+       input{
+           width: 170px;
+           font-size: 14px;
+   
+       }
+       button{
+           /* width: 98px; */
+           font-size: 13px;
+           margin-top: 8px;
+       
+       }
+   }
+
+   @media only screen and (max-width: 292px){
+    .contact__wrapper-banner{
+        min-height: 230px;
+    }
+    .contact-content{
+        h2{
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
    }
    }
 

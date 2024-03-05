@@ -165,10 +165,13 @@ import Container from '../utils/Container.vue'
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        max-width: 530px;
+        margin: auto;
         height: 100vh;
         h2{
             font-size: 40px;
+            max-width: 530px;
+            text-align: center;
         }
         span{
             margin-top: 20px;
@@ -181,7 +184,10 @@ import Container from '../utils/Container.vue'
             text-decoration: none;
             color: var(--success-color);
             border-radius: 10px;
-            padding: 0 50px;
+            /* padding: 0 50px; */
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
             transition: 0.2s;
             &:hover{
                 box-shadow: 0 0 5px var(--success-color);
