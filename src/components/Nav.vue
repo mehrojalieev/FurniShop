@@ -109,6 +109,7 @@ nav {
         }
     }
 
+
 .nav__close-btn{
     background: transparent;
     border: none;
@@ -236,5 +237,24 @@ nav {
                 font-size: 20px;
             }
         }
+    }
+
+    @media only screen and (max-width: 238px){
+        .nav-wrapper{
+            column-gap: 20px;
+        }
+        .nav__actions{
+        column-gap: 10px;
+        .nav__action-link{
+            span{
+                font-size: 20px !important;
+            }
+        }
+    }
+    .nav__close-btn{
+        span{
+            font-size: 20px;
+        }
+    }
     }
 </style>

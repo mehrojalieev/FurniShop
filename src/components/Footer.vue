@@ -187,7 +187,6 @@ import Container from '@/utils/Container.vue';
 
         .footer-header{
             flex-direction: column;
-        border-bottom: 2px solid #fff;
         padding:0 10px 60px;
         .footer__logo{
             width: 220px;
@@ -224,5 +223,83 @@ import Container from '@/utils/Container.vue';
     }
 
     }
+}
+
+@media only screen and (max-width: 334px){
+
+.footer-header{
+padding:0 10px 40px;
+.footer__logo{
+    width: 180px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.footer__social-action{
+justify-content: space-between;
+        img{
+            width: 40px !important;
+            height: 40px;
+        }
+}
+}
+.footer__social-action{
+column-gap: 10px;
+img{
+    width: 30px;
+    height: 30px;
+}
+
+}
+.footer__menu-container{
+ul{
+row-gap: 12px;
+li{
+    font-size: 13px;
+}
+li:first-child{
+    font-size: 18px ;
+}
+}
+
+}
+}
+@media only screen and (max-width: 266px){
+
+.footer-header{
+padding:0 10px 40px;
+.footer__logo{
+    width: 160px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.footer__social-action{
+justify-content: space-between;
+        img{
+            width: 35px !important;
+            height: 35px;
+        }
+}
+}
+.footer__social-action{
+column-gap: 10px;
+img{
+    width: 30px;
+    height: 30px;
+}
+
+}
+.footer__menu-container{
+ul{
+row-gap: 12px;
+li{
+    font-weight: 400;
+    font-size: 11px;
+}
+li:first-child{
+    font-size: 16px ;
+}
+}
+
+}
 }
 </style>

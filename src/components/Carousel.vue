@@ -542,4 +542,20 @@ export default {
     height: 210px;
 }
 }
+
+
+@media only screen and (max-width: 232px){
+    .content{
+        max-width: 100px;
+        h2{
+            display: none;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        p{
+            display: none;
+            font-size: 13px;
+        }
+    }
+}
 </style>

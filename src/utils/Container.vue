@@ -14,4 +14,9 @@
         margin: 0 auto;
         padding: 0px 30px;
     }
+    @media only screen and (max-width: 232px){
+        .container{
+            max-width: 230px;
+        }
+    }
 </style>

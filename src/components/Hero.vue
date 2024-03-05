@@ -184,6 +184,64 @@ header {
     }
 }
 
+@media only screen and (max-width: 298px){
+    .hero__content{
+        h2{
+            font-size: 33px;
+            line-height: 46px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 22px;
+        }
+        button{
+            padding: 9px 70px;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 276px){
+    .hero__content{
+        h2{
+            font-size: 30px;
+            line-height: 46px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 22px;
+        }
+        button{
+            padding: 9px 50px;
+            font-size: 15px;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 276px){
+    .hero__content{
+        h2{
+            font-size: 26px;
+            line-height: 44px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        button{
+            padding: 7px 40px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    }
+}
+
+
+
+
 
 
 </style>
