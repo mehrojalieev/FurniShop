@@ -246,7 +246,7 @@ nav {
         .nav__actions{
         column-gap: 10px;
         .nav__action-link{
-            span{
+            span{ 
                 font-size: 20px !important;
             }
         }
