@@ -184,7 +184,6 @@ import Container from '../utils/Container.vue'
             text-decoration: none;
             color: var(--success-color);
             border-radius: 10px;
-            /* padding: 0 50px; */
             width: 100%;
             max-width: 400px;
             text-align: center;
@@ -603,6 +602,20 @@ import Container from '../utils/Container.vue'
 
      
     }
+    .empty__cart-wrapper{
+        h2{
+            font-size: 34px;
+            line-height: 50px;
+        }
+        span{
+            font-size: 70px;
+        }
+        .cart__shopping-link{
+            font-size: 22px;
+            max-width: 260px;
+        }
+
+    }
     }
     @media only screen and (max-width: 394px){
      
@@ -700,6 +713,20 @@ import Container from '../utils/Container.vue'
      }
 
   
+ }
+ .empty__cart-wrapper{
+    h2{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    span{
+        font-size: 48px;
+    }
+    .cart__shopping-link{
+        padding: 1px 0;
+        max-width: 210px;
+        font-size: 18px;
+    }
  }
  }
  @media only screen and (max-width: 218px){
