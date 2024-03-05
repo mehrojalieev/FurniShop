@@ -69,7 +69,7 @@ export default {
         </div>
         <div class="btns-action">
           <button v-if="this.$store?._state?.data?.cart_data?.findIndex(item => item.id === this.singleProduct.id) === -1"  @click="addCart" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Add to cart</button>
-          <button  v-else  @click="removeCart(this.singleProduct)" class="add__cart-btn"> <span class="material-symbols-outlined">shopping_cart</span> Remove from cart</button>
+          <button  v-else  @click="removeCart(this.singleProduct)" class="add__cart-btn"> <span class="material-symbols-outlined">delete</span> Remove </button>
           <button class="add__wishlist-btn"> <span class="material-symbols-outlined">favorite</span> Add to
             Wishlist</button>
 
@@ -455,7 +455,7 @@ export default {
     }
   }
   }
-  @media only screen and (max-width: 728px){
+  @media only screen and (max-width: 742px){
     .product-image {
     max-width: 370px;
     height: 360px;
@@ -463,13 +463,13 @@ export default {
   }
     .single__product-content {
     h2 {
-      font-size: 38px !important;
+      font-size: 33px !important;
     }
 
     p {
-      font-size: 15px;
-      line-height: 19px;
-      max-width: 350px;
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 330px;
     }
   }
   .feedback-action {
@@ -478,21 +478,10 @@ export default {
   align-items: center;
   column-gap: 10px;
 
-  .stars {
-    span {
-      color: gold;
-      font-size: 20px;
-    }
-  }
-
-  p {
-    color: #1d1c1c !important;
-    font-size: 16px !important;
-  }
 }
   .price-info {
   p {
-    font-size: 20px !important;
+    font-size: 19px !important;
   }
 
   strong {
@@ -503,7 +492,7 @@ export default {
     button {
 
       column-gap: 2px;
-      padding: 9px 15px;
+      padding: 8px 10px;
       font-size: 14px;
       span{font-size: 17px;}
     }
@@ -574,6 +563,353 @@ export default {
     }
   }
   }
+
+  @media only screen and (max-width: 663px){
+    .product-image {
+    max-width: 300px !important;
+    height: 340px;
+  }
+    .single__product-content {
+
+    h2 {
+      font-size: 30px !important;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 17px;
+      max-width: 260px;
+    }
+  }
+  .feedback-action {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 10px;
+
+  .stars {
+    span {
+      margin-top:7px;
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+}
+  .price-info {
+  p {
+    font-size: 18px !important;
+  }
+
+  strong {
+    font-size: 14px;
+  }
+}
+  .btns-action {
+    column-gap: 15px;
+    button {
+
+      column-gap: 2px;
+      padding: 9px 15px;
+      font-size: 14px;
+      span{font-size: 17px;}
+    }
+
+    .add__wishlist-btn {
+      padding: 5px 11px !important;
+
+    }
+  }
+  }
+  @media only screen and (max-width: 623px){
+    .single__product-wrapper{
+      column-gap: 15px;
+    }
+    .product-image {
+    max-width: 250px !important;
+    height: 350px;
+  }
+    .single__product-content {
+
+    h2 {
+      font-size: 26px !important;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 17px;
+      max-width: 260px;
+    }
+  }
+  .feedback-action {
+  margin-top: 10px;
+  column-gap: 6px;
+
+  .stars {
+    span {
+      margin-top:7px;
+      font-size: 18px;
+    }
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+}
+  .price-info {
+  p {
+    font-size: 17px !important;
+  }
+
+  strong {
+    font-size: 13px;
+  }
+}
+  .btns-action {
+    column-gap: 15px;
+    button {
+
+      column-gap: 2px;
+      padding: 7px 8px;
+      font-size: 13px;
+      span{font-size: 16px;}
+    }
+
+    .add__wishlist-btn {
+      padding: 5px 11px !important;
+
+    }
+  }
+  }
+  @media only screen and (max-width: 518px){
+    .single__product-wrapper{
+      padding: 2rem;
+      margin: auto;
+      flex-direction: column;
+    }
+    .product-image {
+    max-width: 420px !important;
+    height: 380px;
+  }
+    .single__product-content {
+      text-align: left !important;
+    h2 {
+      margin-top: 10px;
+      font-size: 32px !important;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 24px;
+      max-width: 420px;
+    }
+  }
+  .feedback-action {
+    display: none;
+}
+  .price-info {
+  p {
+    font-size: 24px !important;
+  }
+
+  strong {
+    font-size: 18px;
+  }
+}
+  .btns-action {
+    column-gap: 15px;
+    button {
+
+      column-gap: 2px;
+      padding: 10px 30px;
+      font-size: 18px;
+      span{font-size: 16px;}
+    }
+
+    .add__wishlist-btn {
+      padding: 9px 11px !important;
+
+    }
+  }
+  }
+  @media only screen and (max-width: 414px){
+  
+    .product-image {
+    max-width: 400px !important;
+    height: 350px;
+  }
+    .single__product-content {
+      text-align: left !important;
+    h2 {
+      margin-top: 15px;
+      font-size: 32px !important;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 400px;
+    }
+  }
+  .feedback-action {
+    display: none;
+}
+  .price-info {
+  p {
+    font-size: 22px !important;
+  }
+  strong {
+    font-size: 17px;
+  }
+}
+  .btns-action {
+    column-gap: 15px;
+    button {
+
+      column-gap: 2px;
+      padding: 7px 13px;
+      font-size: 15px;
+      span{font-size: 16px;}
+    }
+
+    .add__wishlist-btn {
+      padding: 6px 13px !important;
+
+    }
+  }
+  }
+
+  @media only screen and (max-width: 356px){
+  
+  .product-image {
+  max-width: 350px !important;
+  height: 350px;
+}
+  .single__product-content {
+    text-align: left !important;
+  h2 {
+    margin-top: 15px;
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 18px;
+    max-width: 400px;
+  }
+}
+.price-info {
+p {
+  font-size: 20px !important;
+}
+strong {
+  font-size: 16px;
+}
+}
+.btns-action {
+  column-gap: 15px;
+  button {
+
+    column-gap: 2px;
+    padding: 5px 9px;
+    font-size: 13px;
+    span{font-size: 14px;}
+  }
+
+  .add__wishlist-btn {
+    padding: 4px 7px !important;
+
+  }
+}
+}
+
+@media only screen and (max-width: 314px){
+  
+  .product-image {
+  height: 280px;
+}
+  .single__product-content {
+    text-align: left !important;
+  h2 {
+    margin-top: 15px;
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 400px;
+  }
+}
+.price-info {
+p {
+  font-size: 20px !important;
+}
+strong {
+  font-size: 16px;
+}
+}
+.btns-action {
+  column-gap: 10px;
+  button {
+
+    column-gap: 2px;
+    padding: 5px 9px;
+    font-size: 12px;
+    span{font-size: 13px;}
+  }
+
+  .add__wishlist-btn {
+    padding: 4px 7px !important;
+
+  }
+}
+}
+
+@media only screen and (max-width: 281px){
+  
+  .product-image {
+  height: 230px;
+}
+  .single__product-content {
+  h2 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 11px;
+    line-height: 16px;
+    max-width: 280px;
+  }
+}
+.price-info {
+p {
+  font-size: 17px !important;
+}
+strong {
+  font-size: 14px;
+}
+}
+.btns-action {
+  flex-direction: column;
+  column-gap: 10px;
+  button {
+
+    column-gap: 2px;
+    padding: 7px 50px;
+    font-size: 12px;
+    span{font-size: 13px;}
+  }
+
+  .add__wishlist-btn {
+    margin-top: 10px;
+    padding: 6px 37px !important;
+
+  }
+}
+}
+
 </style>
 
 <!-- $route.query.query_name => Bu orqali querydan yuborilgan ma'lumotni olish mumkin -->
