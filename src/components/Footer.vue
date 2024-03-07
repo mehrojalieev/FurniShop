@@ -1,6 +1,18 @@
-
+<script>
+import Container from '@/utils/Container.vue';
+    export default {
+        data(){
+            return {
+                currentPathame: ''
+            }
+        },
+        created(){
+            this.currentPathame = this.$route.path
+        }
+    }
+</script>
 <template>
-    <footer>
+    <footer v-if="!currentPathame.includes('/cart') ">
         <Container>
             <div class="footer-header">
                 <img class="footer__logo" src="../assets/logo.svg" alt="Logo">
@@ -54,10 +66,7 @@
         </footer>
 </template>
 
-<script>
-import Container from '@/utils/Container.vue';
-  
-</script>
+
 
 <style scoped lang="scss">
     footer{

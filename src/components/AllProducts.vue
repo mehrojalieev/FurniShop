@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router';
 
 <template>
     <Container>
-        <div class="allproduct-wrapper">
+        <div id="all-products" class="allproduct-wrapper">
             <div class="allproduct__header">
                 <h2>All Product</h2>
                 <p>
