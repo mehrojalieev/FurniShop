@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import NotFoundVue from "@/views/NotFound.vue";
 import HomePageVue from "@/views/HomePage.vue";
-import Contact from "../views/Contact.vue";
-import About from "../views/About.vue";
 
 
 const router = createRouter({
@@ -13,27 +11,22 @@ const router = createRouter({
             path: '/',
             name: "Home",
             component: HomePageVue
-            
-        },  
+
+        },
         {
             path: '/product/:product_id',
             name: "Single_Product",
             component: () => import('../views/SingleProduct.vue')
         },
         {
-            path: "/about",
-            name: 'About',
-            component: About
-        },
-        {
-            path: "/contact",
-            name: 'Contact',
-            component: Contact
-        },
-        {
             path: "/cart",
             name: 'Cart',
             component: () => import('../views/Cart.vue')
+        },
+        {
+            path: "/like",
+            name: 'Wishlist',
+            component: () => import('../views/Like.vue')
         },
         {
             path: '/:catchAll(.*)',

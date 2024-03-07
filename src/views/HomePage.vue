@@ -1,10 +1,10 @@
 <template>
+    <Nav/>
     <Hero/>
     <Models/>
     <TrendingCategory/>
     <Carousel/>
     <AllProducts/>
-    <!-- <About/> -->
     <Contact/>
 </template>
 
@@ -14,8 +14,8 @@ import Carousel from "@/components/Carousel.vue";
 import TrendingCategory from "@/components/TrendingCategory.vue";
 import Models from "@/components/Models.vue"
 import Contact from "@/components/Contact.vue";
-import About from "@/components/About.vue";
 import AllProducts from "@/components/AllProducts.vue";
+import Nav from "@/components/Nav.vue";
 export default {
   
     components: {
@@ -24,7 +24,6 @@ export default {
     TrendingCategory,
     Models,
     Contact,
-    About,
     AllProducts
 }
 }

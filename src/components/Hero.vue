@@ -1,6 +1,17 @@
+<script>
+import Container from '@/utils/Container.vue';
+import Nav from './Nav.vue';
+export default {
+    components: {
+        Nav,
+        Container
+    }
+}
+</script>
+
 <template>
-    <Nav />
-    <header>
+    <Nav/>
+        <header>
         <Container>
             <div class="hero__content">
                 <h2>Creative Home Simpify your Furniture</h2>
@@ -30,20 +41,11 @@
 </template>
 
 
-<script>
-import Container from '@/utils/Container.vue';
-import Nav from './Nav.vue';
-export default {
-    components: {
-        Nav,
-        Container
-    }
-}
-</script>
+
 
 <style scoped>
 header {
-    position: relative;
+    /* position: relative; */
     display: grid;
     place-items: center;
     width: 100%;

@@ -33,7 +33,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
             </div>
         </div>
 
-        <div class="service__content-wrapper">
+        <div id="features" class="service__content-wrapper">
             <div class="service-content">
                 <h2>The Best Furniture Manufacturer of your choice</h2>
                 <p>

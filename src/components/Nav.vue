@@ -1,13 +1,36 @@
 <script>
 import Container from '@/utils/Container.vue';
 import { RouterLink, RouterView } from 'vue-router'
+
+
 export default {
     components: {
          Container
          },
          data(){
             return {
-                isOpenMenu: false
+                screenWidth: 0,
+                isOpenMenu: false,
+                currentPathname: this.$route.path
+            }
+         },
+         computed: {
+            responsiveWidth(){
+                if(this.screenWidth){
+                    return this.screenWidth = window.innerWidth;
+                } 
+            }
+         },
+         mounted(){
+            this.screenWidth = window.innerWidth
+            window.addEventListener('resize', this.updateWidth)
+         },
+         beforeDestroy(){
+            window.removeEventListener('resize', this.updateWidth)
+         },
+         methods: {
+            updateWidth(){
+                this.screenWidth = window.innerWidth
             }
          }
 }
@@ -15,19 +38,20 @@ export default {
 <template>
     <nav>
         <Container>
-            <div class="nav-wrapper">
+            <div v-if="currentPathname.includes('/') || currentPathname.includes('product') || currentPathname.includes('/cart')"  class="nav-wrapper">
                 <div class="nav__logo">
                     <img src="../assets/logo.svg" alt="Logo" />
                 </div>
-                <ul :style="{transform: isOpenMenu ? 'scale(1)' : 'scale(0)'}"  class="nav__menu">
+                <ul :style="{transform: this.screenWidth > 717 || isOpenMenu  ? 'scale(1)' : 'scale(0)'}"  class="nav__menu">
                     <li><a class="item-link" href="/">Home</a></li>
-                    <li><a class="item-link" href="#about">About</a></li>
+                    <li><a class="item-link" href="#all-products">Products</a></li>
                     <li><a class="item-link" href="#features">Features</a></li>
                     <li><a class="item-link" href="#contact">Contact</a></li>
                 </ul>
                 <button :style="{display: isOpenMenu ? 'block' : 'none !important'}" @click="isOpenMenu = false" class="close-menu"><span class="material-symbols-outlined">close</span></button>
                 <div class="nav__actions">
                     <RouterLink class="nav__action-link" to="/"><span class="material-symbols-outlined">account_circle</span> <strong>Account</strong></RouterLink>
+                    <RouterLink class="nav__action-link" to="like"><span class="material-symbols-outlined">favorite</span> <strong>Favourite</strong></RouterLink>
                     <RouterLink class="nav__action-link" to="cart"><span class="material-symbols-outlined">shopping_cart</span> <strong>Cart</strong></RouterLink>
                     <button type="button" @click="isOpenMenu = true " class="menu__hamburger-btn nav__close-btn"><span class="material-symbols-outlined">menu</span></button>
                 </div>
@@ -43,13 +67,13 @@ export default {
 
 
 
-<style lang="scss" scoped>
+<style lang="scss" >
 nav {
     margin-top: 20px;
     width: 100%;
     height: 40px;
     position: absolute;
-    z-index: 2;
+    z-index: 2 !important;
 }
 
 
@@ -71,7 +95,7 @@ nav {
     transform-origin: top ;
 
     .item-link {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 400;
         transition: 0.2s;
         color: #fff;
@@ -105,7 +129,7 @@ nav {
             font-size: 16px;
             letter-spacing: 0.9px;
             }
-            span{font-size: 20px;}
+            span{font-size: 21px;}
         }
     }
 

@@ -22,7 +22,7 @@ import Container from '@/utils/Container.vue';
 
 <style>
 .contact__wrapper-banner {
-    margin-top: 30px;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;

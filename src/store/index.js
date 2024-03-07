@@ -2,22 +2,27 @@ import { createStore } from 'vuex'
 
 const store = createStore({
     state: {
-        cart_data: []
+        cart_data: [],
+        liked_data: [],
     },
    
     mutations: {
         addData(state, payload){
             console.log(payload);
             state.cart_data = [...state.cart_data, payload]
-            // let cart_index;
-            // cart_index = state.cart_data.findIndex(cart => cart.id === payload.id)
-            // if(cart_index === -1){
-
-            // }
+        },
+        addToLiked(state, payload){
+            console.log(payload);
+            state.liked_data = [...state.liked_data, payload]
         },
         removeCart(state, cartIndex){
             state.cart_data.splice( cartIndex, 1 )
+        },
+        unlikedProduct(state, likedIndex){
+            state.liked_data.splice(likedIndex, 1)
         }
+
+       
     },
     // actions: {
     //     addToStoreData({commit}, payload){
